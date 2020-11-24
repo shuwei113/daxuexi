@@ -40,7 +40,7 @@ def get_endPic(order):
         os.mkdir('images', 777)
     except:
         pass
-    with open('images/end.jpg', 'wb') as f:
+    with open('end.jpg', 'wb') as f:
         img = requests.get(img_url)
         f.write(img.content)
         f.close()
@@ -58,7 +58,7 @@ def html_gener(order):
         <title>{}</title>
     </head>
     <body style="margin: 0;">
-        <img style='width: 100%;height: 100%;' src='images/end.jpg'>
+        <img style='width: 100%;height: 100%;' src='end.jpg'>
     </body>
     </html>
     """.format(title)
