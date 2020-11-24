@@ -36,10 +36,10 @@ def get_title_text(order):
 def get_endPic(order):
     url = get_newest_url(order)
     img_url = url.replace('m.html', 'images/end.jpg').replace('index.html', 'images/end.jpg')
-    try:
-        os.mkdir('images', 777)
-    except:
-        pass
+    # try:
+    #     os.mkdir('images', 777)
+    # except:
+    #     pass
     with open('end.jpg', 'wb') as f:
         img = requests.get(img_url)
         f.write(img.content)
